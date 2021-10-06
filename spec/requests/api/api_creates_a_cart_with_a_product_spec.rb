@@ -21,7 +21,7 @@ RSpec.describe 'POST /api/carts', type: :request do
     end
 
     it 'is expected to return a cart id' do
-      expect(response_json['cart']['id']).to_not eq nil
+      expect(response_json['cart']['cart_id']).to_not eq nil
     end
 
     it 'is expected to return an array of items' do

@@ -19,8 +19,13 @@ class Api::CartsController < ApplicationController
     render json: {
       message: "#{cart.products[0].name} was added to your cart!",
       cart: {
-        id: cart.id,
-        products: cart.products,
+        cart_id: cart.id,
+        products: {
+          product_1: {
+            product_id: cart.products[0].id,
+            name: cart.products[0].name
+          }
+        }
       }
     }, status: 201
   end
