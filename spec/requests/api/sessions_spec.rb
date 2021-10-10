@@ -24,7 +24,7 @@ RSpec.describe "POST /api/auth/sign_in" do
     end
 
     it "is expected to return the expected response" do
-      expect(response_json).to eq expected_response
+      expect(response_json).to eq "expected_response"
     end
   end
 
